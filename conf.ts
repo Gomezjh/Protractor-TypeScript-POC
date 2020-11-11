@@ -6,7 +6,7 @@ export let config: Config = {
   capabilities: {
     browserName: 'chrome'
   },
-  specs: [ '../_Out/tests/*js' ],
+  specs: [ '../_Out/tests/lego_test*js' ],
   //seleniumAddress: 'http://localhost:4444/wd/hub',
 
   // You could set no globals to true to avoid jQuery '$' and protractor '$'
