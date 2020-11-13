@@ -1,15 +1,24 @@
 import {Config} from 'protractor';
+var HtmlReporter = require('protractor-beautiful-reporter');
 
 export let config: Config = {
   framework: 'jasmine',
-  //seleniumServerJar: '../node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
+  
   capabilities: {
     browserName: 'chrome'
   },
   specs: [ '../_Out/tests/*js' ],
-  //seleniumAddress: 'http://localhost:4444/wd/hub',
 
-  // You could set no globals to true to avoid jQuery '$' and protractor '$'
-  // collisions on the global namespace.
-  noGlobals: true
+  onPrepare: function() {
+    // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
+    jasmine.getEnv().addReporter(new HtmlReporter({
+       baseDirectory: 'Reports/screenshots',
+       takeScreenShotsOnlyForFailedSpecs: false,
+       preserveDirectory: false,
+
+    }).getJasmine2Reporter());
+ },
+
+ 
+  noGlobals: false
 };
