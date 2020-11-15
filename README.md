@@ -1,33 +1,34 @@
 # Protractor-TypeScript-POC
-Set up de un proyecto Protractor con Typescript, estuctura POM y protractor-beautiful-reporter para reporte de resultados HTML
+Set up of a Protractor project with Typescript, POM structure and protractor-beautiful-reporter for reporting.
+  
 
-1. Tener instalados typescript y protractor a nivel global:
+1. To have typescript and protractor installed globally:
 
-     >npm install -g typescript
+      > npm install -g typescript
     
-     >npm install -g protractor 
+      > npm install -g protractor
 
-2. Clonar el repositorio 
+2. Clone the repository
 
 
-3. Instalar los modulos del package.json
+3. Install the modules from the package.json
 
-    >npm install
+     > npm install
 
-4. Descargar o actualizar  los webdriver
+4. Download or update the webdriver
 
-    >webdriver-manager update
+     > webdriver-manager update
     
     
 
-Para ejecutar los Tests:
+To run the tests:
 
-      >npm run test
+       > npm run test
 
   
  
-Despues de cada ejecución se genera un Html report con Screenshots en la carpeta Reports
+After each tests execution an Html report with Screenshots is generated in the Reports folder
 
 
 TODO:
-  Implementar Cucumber para trabajar con BDD
+   Implement Cucumber to work with BDD
